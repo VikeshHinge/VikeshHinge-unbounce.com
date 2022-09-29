@@ -99,7 +99,7 @@ const Footer = () => {
       <div style={footerstyle}  >
       {footers.map((ele, i) => {
         return (
-          <div>
+          <div >
             <h3>{ele.h1}</h3>
             <div>
               {ele.p.map((ele, i) => (
@@ -110,7 +110,7 @@ const Footer = () => {
         );
       })}
     </div>
-    <div   style={{display:"flex",justifyContent:"end",gap:"10px" ,marginBottom:"60px" }}   >{bottomlink.map(ele=><Link style={{color:"gray",textDecoration:"none",}}  >{ele}</Link>)}</div>
+    <div   style={{display:"flex",justifyContent:"end",gap:"10px" ,marginBottom:"60px" }}   >{bottomlink.map((ele,i)=><Link key={i} style={{color:"gray",textDecoration:"none",}}  >{ele}</Link>)}</div>
     
     </>
   
