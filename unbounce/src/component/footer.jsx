@@ -80,7 +80,7 @@ let footerstyle = {
     justifyContent:"space-around",
     backgroundColor:"#ffffff",
     textAlign:"start",
-
+    marginTop:"30px"
 }
 
 let linkstyle = {
@@ -95,6 +95,7 @@ let linkstyle = {
 const Footer = () => {
   return (
     <>
+      <img style={{width:"150px",display:"block",marginLeft:"60px",marginTop:"40px"}} src="https://unbounce.com/wp-content/themes/unbounce2019/assets/img/unbounce-footer-icon-dark.svg" alt="" />
       <div style={footerstyle}  >
       {footers.map((ele, i) => {
         return (
@@ -109,7 +110,7 @@ const Footer = () => {
         );
       })}
     </div>
-    <div   style={{display:"flex",justifyContent:"end",gap:"10px" ,marginBottom:"50px" }}   >{bottomlink.map(ele=><Link style={{color:"gray",textDecoration:"none",}}  >{ele}</Link>)}</div>
+    <div   style={{display:"flex",justifyContent:"end",gap:"10px" ,marginBottom:"60px" }}   >{bottomlink.map(ele=><Link style={{color:"gray",textDecoration:"none",}}  >{ele}</Link>)}</div>
     
     </>
   
