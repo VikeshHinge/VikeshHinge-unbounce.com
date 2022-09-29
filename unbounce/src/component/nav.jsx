@@ -7,7 +7,9 @@ import Productdropdown from "./navdropdown/productDropdown"
 import Solutionsdropdown from "./navdropdown/solutionsDropdown";
 import Learndropdown from "./navdropdown/LearnDropdown";
 import Footer from "./footer";
-
+import Login from "./Login";
+import Price from "./Price";
+import Signin from "./signin"
 
 const Navbar = () => {
 
@@ -74,10 +76,13 @@ return (
     <button style={btnstyle2} >Start My Free Trial</button>
     </div>
     </div>
-    <Productdropdown  Value={value}/>
+    {/* <Productdropdown  Value={value}/>
     <Solutionsdropdown/>
-    <Learndropdown/>
-    <Footer/>
+    <Learndropdown/> */}
+    {/* <Login/> */}
+    {/* <Footer/> */}
+    <Price/>
+    {/* <Signin/> */}
     </>
 )
 
