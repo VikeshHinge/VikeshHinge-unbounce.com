@@ -9,11 +9,11 @@ let container = [
     p1:
       "The AI-powered platform for effortlessly creating your highest-converting marketing campaigns.",
     link: [
-      { title: "Smart Builder", icons: <GrCentos/> },
-      { title: "Smart Copy", icons: <GrCopy/> },
-      { title: "Smart Traffic", icons: <GrDirections/> },
-      { title: "Conversion Intelligence Features", icons: <IoRocketOutline/> },
-      { title: "Apps and integrations", icons: <IoExtensionPuzzleOutline/> }
+      { title: "Smart Builder", icons: <GrCentos  size={"25px"}  /> },
+      { title: "Smart Copy", icons: <GrCopy  size={"25px"}  /> },
+      { title: "Smart Traffic", icons: <GrDirections  size={"25px"}  /> },
+      { title: "Conversion Intelligence Features", icons: <IoRocketOutline  size={"25px"}  /> },
+      { title: "Apps and integrations", icons: <IoExtensionPuzzleOutline  size={"25px"}  /> }
     ],
     img: "false"
   },
@@ -23,10 +23,10 @@ let container = [
     p1:
       "The original drag-and-drop landing page platform for experienced marketers.",
     link: [
-      { title: "Classic Builder", icons: <IoLogoAppleAr/> },
-      { title: "Popus & Sticky Bars", icons: <IoNotificationsOutline/> },
-      { title: "Templets" , icons: <IoDocumentsOutline/>},
-      { title: "Classic Unbounce Features" , icons: <IoRocketOutline/>}
+      { title: "Classic Builder", icons: <IoLogoAppleAr  size={"25px"} /> },
+      { title: "Popus & Sticky Bars", icons: <IoNotificationsOutline  size={"25px"}  /> },
+      { title: "Templets" , icons: <IoDocumentsOutline  size={"25px"}  />},
+      { title: "Classic Unbounce Features" , icons: <IoRocketOutline   size={"25px"}  />}
     ],
     img: "false"
   },
