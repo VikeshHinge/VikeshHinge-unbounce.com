@@ -1,3 +1,9 @@
+
+
+
+.div_hide{
+   display: none; 
+}
 .tag{
     background-color: rgb(95, 95, 238);
     color: white;
@@ -62,7 +68,7 @@
     width:100%;
 }
 .div2{
-    position: absolute;
+    position: absolute; 
     width: 170px;
     top:540px;
 }
@@ -92,8 +98,8 @@
 .box3{
    padding-top: 50px;
    padding-bottom: 50px;
-    background-color: #303030;
-margin-top: 60px;
+   background-color: #303030;
+   margin-top: 60px;
 }
 
 .btn2{
@@ -141,4 +147,54 @@ margin-top: 60px;
     height: 30px;
     margin: auto;
     margin-bottom: 10px;
+}
+
+@media all and (min-width:320px) and (max-width:720px){
+.font{
+    font-size: 40px;
+    margin: auto;
+    padding-top: 30px;
+    text-align: start;
+    width: 70%;
+   
+}
+.flex2{
+    flex-direction: column;
+   
+}
+.div2{
+   display: none;
+}
+.pic{
+    width: 170px;
+    margin-top: -30px;
+}
+.div_hide{
+ display: block;
+ 
+}
+.box2{
+    margin-top: 25px;
+}
+.btn1{
+    width: 95%;
+}
+.btn2{
+    width: 95%;
+}
+.set{
+    width:70%;
+    text-align: center;
+    margin: auto;
+    color: white;
+    margin-bottom: 0px;
+}
+.img_flex{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+ }
 }
