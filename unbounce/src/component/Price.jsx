@@ -103,6 +103,7 @@ return (
             return(
                 <div key={i}  className="box2 offers">
                     <div className="div2" ><img className="img" src={ele.Image} alt="" /></div>
+                    <div className="div_hide pic" ><img className="img" src={ele.Image} alt="" /></div>
                     <h1>{ele.head}</h1>
                     <h1>{ele.price}</h1>
                     <div>{ele.offers.map((ele,i)=> <p key={i} > <FaCheck/> {ele}</p> )}</div>
@@ -118,7 +119,8 @@ return (
              <h1  className="set" >How we help you grow</h1>
              <p className="set" >Unbounce was the first landing page builder on the market—and over a decade later,
                  we’re still shakin’ things up. More than 15,000 businesses choose Unbounce because
-                  we continue to help them grow smarter.</p>
+                  we continue to help them grow smarter.
+             </p>
             <div className="flex2" style={{width:"70%",backgroundColor:"#303030",color:"white"}} >
               {card2.map((ele,i)=>{
                 return(
