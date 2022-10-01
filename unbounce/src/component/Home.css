@@ -2,27 +2,25 @@
 
 
 .imgbox{
-    width: 70%;
+    width: 100%;
     height: 500px;
-    position: absolute;
-    left: 30%;
-}
-.img{
-    width: 90%;
-}
-.bckcolor{
-    background-color:#303030;
-    height: 600px;
-}
-.grid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    position: relative;
+    grid-area: b;
 }
 .block{
     color: white;
     font-size: 70px;
     text-align: start;
+    grid-area: a;
+}
+
+.absoliueblk{
+    width:70%;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    text-align: start;
+    margin-top: -60px;
+    grid-area: c;
 }
 .block p{
     width: 80%;
@@ -30,14 +28,24 @@
     margin-top: 10px;
     font-family: "Barlow Semi Condensed",sans-serif;
 }
-.absoliueblk{
-    width:35%;
-    color: white;
-    top:45%;
-    font-size: 20px;
-    position: absolute;
-    left: 8%;
+.img{
+    width:100%;
 }
+.bckcolor{
+    background-color:#303030;
+    height: 600px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    padding-top: 100px;
+    grid-template-areas:  
+     "a b b"
+     "c b b"
+    ;
+}
+
 .font1{
     margin: auto;
 }
@@ -139,8 +147,43 @@
 .dirctor p{
     font-size: 40px;
 }
-
-
+.card3{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    margin: auto;
+}
+.cardofcard3{
+    width: 35%;
+    margin: auto;
+    margin: 100px 50px;
+    text-align: left;
+}
+.card3 h1{
+    font-size: 50px;
+    font-family: "Barlow Semi Condensed",sans-serif;
+   
+}
+.cardofcard3 p{
+    font-size: 20px;
+    width: 60%;
+    
+}
+.cardofcard3 button{
+    display: block;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cardofcard3 button:hover{
+    background-color: white;
+    color: blue;
+}
 
 
 
@@ -213,6 +256,33 @@
     }
     .BBox2{
         margin-top: 0px;
+    }
+    .card3{
+      flex-direction: column;
+      text-align: center;
+     padding-top: 50px;
+     padding-bottom: 50px;
+    }
+    .cardofcard3{
+        margin: auto;
+        width: 80%;
+        text-align: center;
+    }
+    .card3 h1{
+        font-size: 25px;
+        font-family: "Barlow Semi Condensed",sans-serif;
+    }
+    .cardofcard3 p{
+        font-size: 14px;
+        width: 60%;
+        margin: auto;
+    }
+    .cardofcard3 button{
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        margin-bottom: 30px;
     }
 
 }

@@ -1,0 +1,67 @@
+
+.footerbox{
+    display:flex;
+    width:100%;
+    justify-content:space-around ;
+    background-color:#ffffff;
+    text-align:start;
+    margin-top:30px;
+    color: rgb(139, 136, 136);
+}
+
+.footerIcon{
+    width:170px;
+    display:block;
+    margin-left:60px;
+    margin-top:40px;
+
+}
+.bottom_box{
+    display:flex;
+    justify-content:end;
+    gap:10px ;
+    margin-bottom:60px;
+}
+.linkList{
+    display:flex;
+    text-align:start;
+    margin-top:30px;
+    text-decoration:none;
+    font-size:13px;
+    color:gray;
+}
+
+
+
+
+
+
+
+
+@media all and (min-width:320px) and (max-width:720px){
+
+.footerIcon{
+    margin: auto;
+    margin-left: 10px;
+}
+.footerbox{
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+.footerbox h3{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.brandlist{
+    display: none;
+}
+.bottom_box{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+}

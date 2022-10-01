@@ -97,7 +97,7 @@ if(amount !== 0){
 
 return (
     <div style={{backgroundColor:"#f4f3f2"}} >
-    <p  className="font" >Grow your business with Unbounce—free for 14 days</p>
+    <p className="font" >Grow your business with Unbounce—free for 14 days</p>
      <div className="flex2" >
         {cards.map((ele,i)=>{
             return(
