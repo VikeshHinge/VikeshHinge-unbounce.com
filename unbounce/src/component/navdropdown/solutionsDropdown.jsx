@@ -28,46 +28,39 @@ let soldata = [
   }
 ];
 
-const Solutionsdropdown = () => {
-  let solnstyle = {
-    width: "40%",
-    display: "flex",
-    margin: "auto",
-    backgroundColor: "silver",
-    textAlign: "start",
-    padding: "20px",
-    justifyContent: "center",
-    gap: "40px",
-    backgroundColor:"palevioletred",
-  };
+
+
+
+const Solutionsdropdown = ({iso_Drop}) => {
+ 
+
+
 
   return (
-    <div style={solnstyle}>
+    <div style={{display:iso_Drop?"block":"none"}}    >
+           <div className="display-solution" >
       {soldata.map((items) => {
         return (
           <div key={items.id} >
             <h3>{items.h3}</h3>
-            <h4
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "start"
-              }}
-            >
+            <p >
               {items.link.map((ele) => (
-                <Link
-                  style={{ marginTop: "10px", backgroundColor: "grey" }}
+                <p
+                 className="linksol"
+                
                   key={ele.title}
                 >{ele.icons}
                   {ele.title}
-                </Link>
+                </p>
               ))}
-            </h4>
+            </p>
           </div>
         );
       })}
     </div>
+      </div>
+
   );
-};
+}; 
 
 export default Solutionsdropdown;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { AiFillTwitterCircle,AiFillLinkedin,AiFillGoogleCircle,AiFillInstagram,AiFillYoutube } from "react-icons/ai";
-
+import "./footer.css"
 
 let footers = [
   {
@@ -64,9 +64,6 @@ let footers = [
 ];
 
 let bottomlink = [
-    "Security",
-    "Privacy Policy",
-    "Terms of Service",
     <AiFillLinkedin size={"40px"} />,
     <AiFillTwitterCircle size={"40px"} />,
     <AiFillGoogleCircle size={"40px"} />,
@@ -74,44 +71,31 @@ let bottomlink = [
     <AiFillYoutube size={"40px"} />
   ];
 
-let footerstyle = {
-    display:"flex",
-    width:"100%",
-    justifyContent:"space-around",
-    backgroundColor:"#ffffff",
-    textAlign:"start",
-    marginTop:"30px"
-}
 
-let linkstyle = {
-    display:"flex",
-    textAlign:"start",
-    marginTop:"30px",
-    textDecoration:"none",
-    fontSize:"13px",
-    color:"gray"
-}
+
+
 
 const Footer = () => {
   return (
     <>
-      <img style={{width:"150px",display:"block",marginLeft:"60px",marginTop:"40px"}} src="https://unbounce.com/wp-content/themes/unbounce2019/assets/img/unbounce-footer-icon-dark.svg" alt="" />
-      <div style={footerstyle}  >
+      <img className="footerIcon" src="https://unbounce.com/wp-content/themes/unbounce2019/assets/img/unbounce-footer-icon-dark.svg" alt="" />
+      <div className="footerbox"  >
       {footers.map((ele, i) => {
         return (
-          <div >
-            <h3>{ele.h1}</h3>
-            <div>
+          <div  className="Listcontainer">
+            <h3 className="listheader">{ele.h1}</h3>
+            <div className="brandlist">
               {ele.p.map((ele, i) => (
-                <Link style={linkstyle}  key={i}>{ele}</Link>
+                <Link className="linkList"  key={i}>{ele}</Link>
               ))}
             </div>
           </div>
         );
       })}
     </div>
-    <div   style={{display:"flex",justifyContent:"end",gap:"10px" ,marginBottom:"60px" }}   >{bottomlink.map((ele,i)=><Link key={i} style={{color:"gray",textDecoration:"none",}}  >{ele}</Link>)}</div>
-    
+    <div  className="bottom_box"  >
+      {bottomlink.map((ele,i)=><Link key={i} style={{color:"gray",textDecoration:"none"}}  >{ele}</Link>)}
+    </div>
     </>
   
   );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import {useState} from "react"
 let container = [
   {
     id: 0,
@@ -13,7 +13,7 @@ let container = [
       { title: "Conversions Insights" }
     ],
     img: "false"
-  },
+  }, 
   {
     id: 1,
     h1: "Marketing Fundamentals",
@@ -36,45 +36,46 @@ let container = [
   }
 ];
 
-const Learndropdown = () => {
- 
 let mainboxstyle ={
-    display:"flex",
-    gap:"20px",
-    width:"75%",
-    margin: "auto",
-    padding:"10px",
-    backgroundColor:"skyblue"
+  display:"flex",
+  gap:"20px",
+  width:"75%",
+  margin: "auto",
+  padding:"10px",
+  backgroundColor:"skyblue"
 }
+
+const Learndropdown = ({isl_Drop}) => {
+  let [dropdown, setdropdown] = useState (false)
+
 
 
 
 
   return (
-    <>
-      <div style={mainboxstyle} >
+    <div  style={{display:isl_Drop?"block":"none"}}  >
+      <div className="display-pro" >
         {container.map((items) => {
           return (
             <div key={items.id}>
-              <h2>{items.h1}</h2>
-              <p>{items.p1}</p>
+              <h4 style={{textAlign:"start"}}>{items.h1}</h4>
+              <p style={{fontSize:"14px",width:"70%",textAlign:"center"}} >{items.p1}</p>
               <h4 style={{display:"flex",flexDirection:"column",textAlign:"start"}}>
                 {items.link.map((ele) => {
                 return (
-                    
-                        <Link style={{marginTop:"10px",backgroundColor:"grey"}} key={ele.title}> {ele.title}</Link>
+                        <Link className="DDlink" key={ele.title}> {ele.title}</Link>
                      )}
                 )
                }
               </h4>
               <div>
-                <img style={{width:"70%"}}  src={items.img} alt="" />
+                <img style={{width:"80%"}}  src={items.img} alt="" />
               </div>
             </div>
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -41,11 +41,22 @@ const card2 = [
     }
     ]
 
+let card3 = [
+    {h1:"Start building pagesfor free",
+    h4:"Build landing pages, popups, and sticky bars with your free 14-day trial. Cancel anytime.",
+    btn:"Start Building Pages"
+},
+{h1:"Start writing with AI—also free",
+h4:"Use AI to instantly generate copy for your marketing campaigns. No credit card required.",
+btn:"Start Writting With AI"
+}
+]
+
 
 const Homepg = () => {
 
     return (
-        <div>
+        <div >
            <div className="bckcolor grid"  >
              <div className="block" ><p>Smart marketing tools to grow your business</p></div>
              <div className="imgbox"><img  className="img" src="https://unbounce.com/photos/New-banner_2x_cropped_top.png" alt="" /></div>
@@ -54,7 +65,7 @@ const Homepg = () => {
                 <p>Turn more of your visitors into customers. Unbounce is the AI-powered landing page builder with smart 
                 features that let you create beautiful, high-performing marketing campaigns in just a few minutes.
                 </p>
-                <div  style={{display:"flex",gap:"10px",position:"relative"}}>
+                <div  style={{display:"flex",gap:"10px"}}>
                     <button className="Btn1" >Building Landing Page</button>
                     <button  className="Btn2">Write With AI</button>
                 </div>
@@ -114,7 +125,18 @@ const Homepg = () => {
                 </div>
                  <h2 >Claire Seymour, <h5  style={{color:"gray"}}  >Director of Marketing</h5> </h2>
               </div>
-
+              
+              <div className="card3" >
+                {card3.map((ele,i) => {
+                    return(
+                        <div key={i} className="cardofcard3" >
+                            <h1>{ele.h1}</h1>
+                            <p>{ele.h4}</p>
+                            <button >{ele.btn}</button>
+                        </div>
+                    )
+                })}
+              </div>
 
         </div>
     )

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { GrCentos, GrCopy, GrDirections } from "react-icons/gr";
 import { IoRocketOutline,IoExtensionPuzzleOutline,IoLogoAppleAr,IoNotificationsOutline,IoDocumentsOutline} from "react-icons/io5";
+import { useEffect } from "react";
+import { useState } from "react";
 
 let container = [
   {
@@ -40,45 +42,42 @@ let container = [
   }
 ];
 
-let mainboxstyle ={
-    display:"flex",
-    justifyContent:"center",
-    gap:"30px",
-    width:"75%",
-    margin: "auto",
-    padding:"20px",
-   border:"2px solid",
-   
-};
 
 
-const Productdropdown = (prop) => {
+
+
+const Productdropdown = ({isDrop}) => {
+let [dropdown, setdropdown] = useState (false)
+
+//console.log(dropdown)
 
 
   return (
-    <>
-      <div style={mainboxstyle}>
+    <div  style={{display:isDrop?"block":"none"}}  >
+      <div className="display-pro" >
         {container.map((items) => {
           return (
-            <div style={{border:"1px solid",width:"30%",textAlign:"center",}} key={items.id}>
+            <div key={items.id}>
               <h2>{items.h1}</h2>
-              <p  style={{fontSize:"12px"}} >{items.p1}</p>
-              <h4
+              <p  style={{fontSize:"12px",width:"70%",margin:"auto"}} >{items.p1}</p>
+              <p
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  textAlign: "start"
+                  textAlign: "start",
+                  marginLeft:"10px",
+                  gap:"10px"
                 }}
               >
                {items.link.map((ele) => {
                 return (
-                        <Link style={{marginTop:"15px",marginLeft:"20px",fontSize:"18px",textDecoration:"none",color:"black"}} 
+                        <Link onClick={()=>setdropdown(!dropdown)} className="DDlink"
                         key={ele.title}> {ele.icons} {ele.title}</Link>
                      )}
                 )
                }
                 
-              </h4>
+              </p>
               <div>
                 <img style={{ width: "90%" }} src={items.img} alt="" />
               </div>
@@ -86,7 +85,7 @@ const Productdropdown = (prop) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
