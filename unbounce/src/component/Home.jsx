@@ -19,7 +19,7 @@ const card = [
     h1:"… And optimize your traffic",
     p:"Improve your results with the click of a button. Unbounce routes your visitors to the best landing page for people like them and—on average—gets you 30% more sales and signups.",
     link:"Optimize Your Traffic"
-}
+},
 ]
 
 
@@ -89,9 +89,9 @@ const Homepg = () => {
             <p>Oh. And get way better results, too.</p>
          </div>
 
-         <div className="Flexbox" >{card.map((ele,i)=>{
+         <div className="Flexbox" >{card.map((ele)=>{
                 return(
-                    <div>
+                    <div key={ele.h1} >
                         <div>{ele.icon}</div>
                         <h2>{ele.h1}</h2>
                         <p>{ele.p}</p>
@@ -107,9 +107,9 @@ const Homepg = () => {
             </p>
           </div>
 
-          <div className="Flexbox" >{card2.map((ele,i)=>{
+          <div className="Flexbox" >{card2.map((ele)=>{
                 return(
-                    <div>
+                    <div  key={ele.h1}>
                         <img style={{width:"70%"}} src={ele.icon} alt="" />
                         <h3>{ele.h1}</h3>
                         <p>{ele.p}</p>
@@ -127,9 +127,9 @@ const Homepg = () => {
               </div>
               
               <div className="card3" >
-                {card3.map((ele,i) => {
+                {card3.map((ele) => {
                     return(
-                        <div key={i} className="cardofcard3" >
+                        <div key={ele.h1} className="cardofcard3" >
                             <h1>{ele.h1}</h1>
                             <p>{ele.h4}</p>
                             <button >{ele.btn}</button>

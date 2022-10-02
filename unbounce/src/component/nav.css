@@ -65,6 +65,12 @@
   gap:20px;
   text-decoration: none;
 }
+.navLink2{
+    color: white;
+    font-size: 18px;
+    display: flex;
+    text-decoration: none;
+}
 .navLink>p{
     display: flex;
     height: 60px;

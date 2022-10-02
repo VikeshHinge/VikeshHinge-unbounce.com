@@ -18,6 +18,7 @@ let footers = [
       "Integrations",
       "Product Security"
     ]
+    
   },
   {
     h1: "Solutions",

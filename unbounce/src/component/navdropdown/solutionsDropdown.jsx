@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import { CgShoppingCart, } from "react-icons/cg";
 import { IoCloudyNightOutline ,IoSettingsOutline,IoNavigateOutline,IoEarth,IoStarOutline,IoGlobeOutline} from "react-icons/io5";
 import { GoLightBulb,GoLaw } from "react-icons/go";
@@ -18,6 +18,7 @@ let soldata = [
   {
     id: 1,
     h3: "By Use Case",
+
     link: [
       { title: "PPC",icons:<IoNavigateOutline/> },
       { title: "Social Ads",icons:<IoEarth/> },

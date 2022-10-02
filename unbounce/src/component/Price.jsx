@@ -17,8 +17,7 @@ let cards = [
       btn: "Start Building For Free"
     },
     {
-      Image:
-        "https://unbounce.com/wp-content/webp-express/webp-images/doc-root/photos/pricing_grid_icons_optimize3x-12X_.png.webp",
+      Image:"https://unbounce.com/wp-content/webp-express/webp-images/doc-root/photos/pricing_grid_icons_optimize3x-12X_.png.webp",
       head: "Optimize",
       price: "$135",
       offers: [
@@ -134,7 +133,7 @@ return (
             </div>    
 
              <div  className="img_flex"  >
-                {Img.map((pic,i) => <img style={{width:"120px"}} key={i} src={pic} />)}
+                {Img.map((pic,i) => <img style={{width:"120px"}} key={i} src={pic} alt="" />)}
              </div>
 
           </div>
