@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { GrCentos, GrCopy, GrDirections } from "react-icons/gr";
 import { IoRocketOutline,IoExtensionPuzzleOutline,IoLogoAppleAr,IoNotificationsOutline,IoDocumentsOutline} from "react-icons/io5";
-import { useEffect } from "react";
-import { useState } from "react";
+
 
 let container = [
   {
@@ -47,9 +46,7 @@ let container = [
 
 
 const Productdropdown = ({isDrop}) => {
-let [dropdown, setdropdown] = useState (false)
 
-//console.log(dropdown)
 
 
   return (
@@ -71,7 +68,7 @@ let [dropdown, setdropdown] = useState (false)
               >
                {items.link.map((ele) => {
                 return (
-                        <Link onClick={()=>setdropdown(!dropdown)} className="DDlink"
+                        <Link className="DDlink"
                         key={ele.title}> {ele.icons} {ele.title}</Link>
                      )}
                 )
