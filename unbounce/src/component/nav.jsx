@@ -1,6 +1,6 @@
 
 import {Link} from "react-router-dom";
-import { useState,useContext } from "react";
+import { useState } from "react";
 import { CgChevronDown } from "react-icons/cg";
 import { IoReorderFourSharp } from "react-icons/io5";
 import { ImSearch } from "react-icons/im";
@@ -23,12 +23,42 @@ let navpath = [
     
 const Navbar = () => {
 
-    let [isDrop,setIsDrop]=useState(false)
-    let [iso_Drop,setIso_Drop]=useState(false)
-    let [isl_Drop,setIsl_Drop]=useState(false)
-    let [minDrop,setminDrop] = useState(false)
-
+    let [isDrop,setIsDrop]=useState(false);
+    let [iso_Drop,setIso_Drop]=useState(false);
+    let [isl_Drop,setIsl_Drop]=useState(false);
+    let [minDrop,setminDrop] = useState(false);
+    let [minsearch,setminsearch] = useState(false);
    
+   
+let Showmindropdown = () => {
+     if(!minDrop && !minsearch){
+        setminsearch(true)
+        setminDrop(true)
+     }
+    else if(minsearch && !minDrop){
+        setminDrop(true)
+     }
+    else {
+        setminsearch(false)
+        setminDrop(false)
+    }
+   
+};
+
+let Showsearch = () => {
+ 
+    if(!minsearch){
+     setminsearch(true)
+    }
+  else if(minsearch && minDrop){
+     setminDrop(false)
+    }
+    else if(minsearch && !minDrop){
+      setminsearch(false)
+    }
+   
+};
+
 
 
 return (
@@ -71,12 +101,40 @@ return (
           <Link to="/pricing" ><button className="btnstyle2 hide">Start My Free Trial</button></Link>
     </div>
     <div className="iconbox2 hidecomp" >
-        <ImSearch   size="20px" />
-        <IoReorderFourSharp size="20px"  />
+        <ImSearch onClick={Showsearch} size="20px" />
+        <IoReorderFourSharp onClick={Showmindropdown} size="20px" />
+    </div>
+     
+
+    </div>
+   
+
+    <div  className="notvisible" >
+
+           <div  style={{paddingBottom:"10px",display:minsearch?"block":"none"}}    >
+           <div  style={{display:"flex",gap:"10px",marginBottom:"10px"}} ><ImSearch   size="25px" /><input type="text" placeholder="Search..." className="search"/></div>
+           <hr/>
+           </div>
+
+    <div  style={{display:minDrop?"block":"none"}}>
+          <div  className="min_linkbox"  >
+          {navpath.map((ele,i)=> {
+            return(
+                <Link  to={ele.path} key={i} className="min_link">{ele.title}</Link>
+            )
+        })}
+          </div>
+         <div style={{display:"flex",flexFlow:"column"}} >
+          <Link to="/pricing" ><button className="min_btn2" >Start My Free Trial</button></Link>
+          <Link  to="/login"><button className="min_btn1" >Log In</button></Link>
+         </div>
+    </div>
+     
+   
+
     </div>
     </div>
-    </div>
-)
+) 
 
 }
 
