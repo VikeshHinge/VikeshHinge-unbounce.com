@@ -97,15 +97,15 @@ if(amount !== 0){
 return (
     <div style={{backgroundColor:"#f4f3f2"}} >
     <p className="font" >Grow your business with Unbounce—free for 14 days</p>
-     <div className="flex2" >
+     <div className="flex2" > 
         {cards.map((ele,i)=>{
             return(
-                <div key={i}  className="box2 offers">
-                    <div className="div2" ><img className="img" src={ele.Image} alt="" /></div>
+                <div key={i}  className="box2 offers ffamily">
+                    <div className="div2" ><img className="img img2" src={ele.Image} alt="" /></div>
                     <div className="div_hide pic" ><img className="img" src={ele.Image} alt="" /></div>
                     <h1>{ele.head}</h1>
-                    <h1>{ele.price}</h1>
-                    <div>{ele.offers.map((ele,i)=> <p key={i} > <FaCheck/> {ele}</p> )}</div>
+                    <div style={{display:"flex",gap:"5px"}} > <h1 style={{fontSize:"55px"}}>{ele.price}</h1><p style={{marginTop:"80px",fontSize:"15px"}}>USD / mo</p></div>
+                    <div  style={{height:"40%"}} >{ele.offers.map((ele,i)=> <p key={i} > <FaCheck/> {ele}</p> )}</div>
                     <button  onClick={()=>Payforsubscription(ele.price)} className={i===3?"btn2":"btn1"}  >{ele.btn}</button>
                 </div>
                 

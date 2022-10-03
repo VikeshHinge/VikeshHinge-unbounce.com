@@ -1,4 +1,5 @@
-import {Link, Navigate} from "react-router-dom";
+
+import {Link} from "react-router-dom";
 import "./mystyle.css";
 
 import {useContext,useState} from "react";
@@ -8,7 +9,7 @@ const user = {
     pw:""
 }
 
-const Signin = () => {
+const CreateAccount= () => {
 const {status,toggleStatus} = useContext(Authcontext);
 const [sigin,setsign] = useState(user)
 
@@ -22,32 +23,35 @@ if(e.target.value === null){
 
 
 const userSignin = (event) =>{
-    event.preventDefault();
-    toggleStatus();
+    event.preventDefault()
+
+if(sigin.email ==="" && sigin.pw ===" "){
+    alert("Fill the User Data properly !")
+}else{
     console.log(sigin)
-   document.querySelector(".popup").innerText="User Signin Sucess !!!"
- 
+    toggleStatus()
+}
+
+    
 }
 
 
 
 return(
-    <div className="flex3" style={{paddingTop:"70px"}} >
-      
-        <form className="form box4 signin" >
-        <div style={{display:status?"block":"None"}} className="pop" ><h1 className="popup" ></h1></div>
+    <div className="flex3" style={{paddingTop:"50px"}} >
+        <form className="box4 signin" >
             <div style={{marginTop:"50px"}} > <img  style={{width:"200px",marginBottom:"20px"}}  src="https://d9hhrg4mnvzow.cloudfront.net/unbounce.com/product-selector/7089096e-d22ffb13-logo-unbounce.svg" alt="" /></div>
             <h2>Sign Into Your Unbounce Account</h2>
             <hr style={{width:"60%",marginBottom:"-10px"}} />
-            <div  ><p>Need an Unbounce Account?<Link className="blink" to="/pricing" > Create an account</Link></p></div>
-            <br/><br />
+            <div  ><p>Need an Unbounce Account?<Link  className="blink" to="/pricing" > Create an account</Link></p></div>
+            <br /><br />
             <div className="input_box signin" >
                 Email: <br />
-                <input name="email"  value={sigin.email} onChange={Signupfun} className="input" type="email" required/><br /><br />
+                <input name="email" value={sigin.email} onChange={Signupfun} className="input" type="text" required/><br /><br />
                 Password: <br />
-                <input name="pw" className="input" value={sigin.pw}  onChange={Signupfun}  type="password" required/><br /><br />
+                <input name="pw" className="input" value={sigin.pw}  onChange={Signupfun}  type="text" required/><br /><br />
             </div>
-            <input type="submit" onClick={userSignin}  className="btn1" value="Sign In" />
+            <button onClick={userSignin}  className="btn1" >Sign In</button>
         </form>
         <div  style={{width:"50%"}}  className="off_img">
             <img style={{width:"100%"}}  src="https://d9hhrg4mnvzow.cloudfront.net/signin.unbounce.com/sign-in-advertising-prod/9153dbbb-1280x1440-unbounce-apps-login-image-green-v3-pngpng_1000000000000000000028.png" alt="" />
@@ -57,5 +61,4 @@ return(
 
 }
 
-export default Signin;
-
+export default CreateAccount;

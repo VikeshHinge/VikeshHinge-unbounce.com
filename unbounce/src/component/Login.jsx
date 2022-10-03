@@ -21,9 +21,9 @@ return(
         <div className="box signin">
             {select.map((ele,i)=> {
                 return(
-                  <Link to="/signin" >
+                  <Link to="/signin" style={{textDecoration:"none"}} >
                         <div key={i} className="divstyle" >
-                       <p  style={{fontSize:"12px",textDecoration:"none"}} >{ele.a}</p>
+                       <p style={{fontSize:"12px"}} >{ele.a}</p>
                        <div style={{display:"flex",gap:"5px"}} ><p className="text"  >{ele.title} </p><p className="tag">{ele.tag}</p> </div>
                        </div>
                   </Link>
