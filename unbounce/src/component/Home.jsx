@@ -59,9 +59,9 @@ const Homepg = () => {
         <div >
            <div className="bckcolor grid"  >
              <div className="block" ><p>Smart marketing tools to grow your business</p></div>
-             <div className="imgbox"><img  className="img" src="https://unbounce.com/photos/New-banner_2x_cropped_top.png" alt="" /></div>
-             <div className="hideme"><img  className="img" src="https://unbounce.com/photos/New-banner_2x_cropped_top.png" alt="" /></div>
-             <div className="absoliueblk" >
+             <div className="imgbox"><img  className="Imgimg" src="https://unbounce.com/photos/New-banner_2x_cropped_top.png" alt="" /></div>
+             <div className="hideme"><img  className="Imgimg" src="https://unbounce.com/photos/New-banner_2x_cropped_top.png" alt="" /></div>
+             <div className="absoliueblk absoliueblk2" >
                 <p>Turn more of your visitors into customers. Unbounce is the AI-powered landing page builder with smart 
                 features that let you create beautiful, high-performing marketing campaigns in just a few minutes.
                 </p>
@@ -95,7 +95,7 @@ const Homepg = () => {
                         <div>{ele.icon}</div>
                         <h2>{ele.h1}</h2>
                         <p>{ele.p}</p>
-                        <button  className="Btn3"   >  <IoReturnDownForwardSharp size={"20px"}/>  {ele.link}</button>
+                        <button  className="Btn3">  <IoReturnDownForwardSharp size={"20px"}/>  {ele.link}</button>
                     </div>
                 )
               })}</div>
@@ -109,11 +109,11 @@ const Homepg = () => {
 
           <div className="Flexbox" >{card2.map((ele)=>{
                 return(
-                    <div  key={ele.h1}>
-                        <img style={{width:"70%"}} src={ele.icon} alt="" />
+                    <div style={{marginTop:"50px"}}  key={ele.h1}>
+                        <img style={{width:"80%",marginTop:"-40%",marginLeft:"20px"}} src={ele.icon} alt="" />
                         <h3>{ele.h1}</h3>
                         <p>{ele.p}</p>
-                        <button  className="Btn3">  <IoReturnDownForwardSharp size={"20px"}/>  {ele.link}</button>
+                        <button  className="Btn3"><IoReturnDownForwardSharp size={"20px"}/>  {ele.link}</button>
                     </div>
                 )
               })}</div>

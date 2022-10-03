@@ -26,7 +26,7 @@ const Navbar = () => {
     let [isDrop,setIsDrop]=useState(false)
     let [iso_Drop,setIso_Drop]=useState(false)
     let [isl_Drop,setIsl_Drop]=useState(false)
- 
+    let [minDrop,setminDrop] = useState(false)
 
    
 

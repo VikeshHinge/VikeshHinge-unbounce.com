@@ -14,13 +14,13 @@
 }
 
 .absoliueblk{
-    width:70%;
+    width:90%;
     color: white;
     font-size: 20px;
     margin: auto;
     text-align: start;
-    margin-top: -60px;
     grid-area: c;
+    margin-top: -60px;
 }
 .block p{
     width: 80%;
@@ -28,7 +28,7 @@
     margin-top: 10px;
     font-family: "Barlow Semi Condensed",sans-serif;
 }
-.img{
+.Imgimg{
     width:100%;
 }
 .bckcolor{
@@ -93,8 +93,8 @@
     color: #303030;
     width: 75%;
     margin: auto;
-    margin-top: 120px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 120px;
 }
 .Box2 h1{
     font-family: "Barlow Semi Condensed",sans-serif;
@@ -198,7 +198,7 @@
     .imgbox{
       display: none;
     }
-    .img{
+    .Imgimg{
         width: 60%;
     }
     .absoliueblk{
@@ -221,17 +221,21 @@
     }
     .hideme{
         display: block;
+      
     }
+    
     .extra{
     width:100%;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     background-color: #303030;
+    padding-top: 20px;
     }
     .extra p {
         width: 70%;
        margin: auto;
        margin-bottom: 20px;
+       font-size: 15px;
     }
     .Btn1{
         margin-top: 10px;
@@ -284,5 +288,13 @@
         padding: 10px;
         margin-bottom: 30px;
     }
-
+    .Btn1{
+        width: 70%;
+    }
+    .Btn2{
+        width: 70%;
+    }
+   .Box2{
+    padding-top: 20px;
+   }
 }

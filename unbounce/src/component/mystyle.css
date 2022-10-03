@@ -45,9 +45,14 @@
     padding-top: 200px;
     padding-bottom: 100px;
 }
+.ffamily{
+    font-family: "Barlow Semi Condensed",sans-serif;
+    color: #303030;
+}
 .box2{
     margin-left: 10px;
     margin-top: 50px;
+    
 }
 .text{
   text-decoration: none;
@@ -70,6 +75,9 @@
 .img{
     width:100%;
 }
+.img2{
+    margin-top: -100px;
+}
 .div2{
     width: 170px;
 }
@@ -79,6 +87,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    
 }
 .btn1{
   display: block;
@@ -114,7 +123,16 @@
   font-size: 15px;
   font-weight: bold;
 }
-
+.popup{
+    color:green;
+    background-color: #c9f09c;
+    text-align: center;
+}
+.pop{
+    width: 50%;
+    position: absolute;
+    top:50px
+}
 .set{
     width:50%;
     text-align: center;
@@ -147,7 +165,17 @@
     height: 30px;
     margin: auto;
     margin-bottom: 10px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color:gray;
 }
+
+
+
+
+
+
 
 @media all and (min-width:320px) and (max-width:720px){
 .font{
@@ -203,6 +231,11 @@
  .signin{
  width: 90%;
  margin: auto;
+ }
+ .pop{
+    width: 100%;
+    left: 0px;
+    position: fixed;
  }
 
 }
