@@ -17,7 +17,7 @@ const Routepage = () => {
         <Routes>
             <Route path="/" element={<Homepg/>} ></Route>
             <Route path="/pricing" element={ <PrivateRout><Price/></PrivateRout>}  ></Route>
-            <Route path="/login" element={<Login/>} ></Route>
+            <Route path="/login" element={<Login/>} ></Route> 
             <Route path="/signin" element={<Signin/>}></Route>
             <Route Path="/edit?_ga=1325374889456bgggjdfiuurk567" element={<CreateAccount/>} ></Route>
             {/* <Route path="/products"  element={<Productdropdown/>}></Route>

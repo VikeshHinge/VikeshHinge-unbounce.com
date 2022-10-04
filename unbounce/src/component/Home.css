@@ -184,8 +184,46 @@
     background-color: white;
     color: blue;
 }
+.flexme{
+    width: 90%;
+    display: flex;
+     gap:10px;
+     margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.flex_img{
+    width: 100%;
+}
+.flexme_div{
+    width: 100%;
+    margin: auto;
+    font-family: "Barlow Semi Condensed",sans-serif;
+}
+.flexme_div div:first-child{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.flexme_div div:first-child p{
+    font-size: 25px;
+    color: blue;
+     width: 75%;
+     margin-left: 0px;
+}
 
-
+.flexme_div p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    text-align: left;
+}
+.linkstyle{
+  border: 20px solid;
+}
 
 
 
@@ -207,17 +245,18 @@
     .grid{
         display: flex;
         flex-direction: column;
+        padding-top: 50px;
     }
     .block{
         color: white;
         width: 80%;
         font-size: 40px;
         margin: auto;
+        margin-top: 0px;
     }
     .block p{
-        width: 80%;
-        margin-left: 70px;
-        margin-top: 10px;
+        width: 90%;
+        margin-left: 0px;
     }
     .hideme{
         display: block;
@@ -258,6 +297,9 @@
     .Flexbox p{
         width: 100%;
     }
+    .Flexbox button{
+       width: 90%;
+    }
     .BBox2{
         margin-top: 0px;
     }
@@ -297,4 +339,15 @@
    .Box2{
     padding-top: 20px;
    }
+   .flexme{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    }
 }

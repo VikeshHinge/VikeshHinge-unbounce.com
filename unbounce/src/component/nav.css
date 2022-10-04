@@ -13,6 +13,17 @@
     position: fixed;
 
 }
+.navstyle2{
+    width:100%;
+    height:50px;
+    display:flex;
+    background-color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    gap:30px;
+    align-items: center;
+    position: fixed;
+}
 
 .flexdis{
     display: flex;
@@ -32,6 +43,15 @@
     gap:16px;
     margin-right:50px;
    }
+   .iconbox2max {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#303030;
+    margin:auto;
+    gap:16px;
+    margin-right:50px;
+   }
 
  .btnstyle1{
     margin:auto;
@@ -43,6 +63,16 @@
     border:2px solid white;
     color:white;
 }
+.btnstyle1_2{
+    margin:auto;
+    width:80px;
+    height:40px;
+    font-size:15px;
+    font-weight:bolder;
+    background-color:transparent;
+    border:2px solid #0033ff;
+    color:#0033ff;
+}
  .btnstyle2{
     margin:auto;
     height:40px;
@@ -52,6 +82,16 @@
     border:2px solid white;
     border-radius:2px;
     color:#303030;
+}
+.btnstyle2_2{
+    margin:auto;
+    height:40px;
+    font-size:15px;
+    font-weight:bolder;
+    background-color:#0033ff;
+    border:2px solid #0033ff;
+    border-radius:2px;
+    color:white;
 }
 .hidecomp{ 
     display: none;
@@ -70,6 +110,13 @@
     font-size: 18px;
     display: flex;
     text-decoration: none;
+}
+.navLink22{
+    color: #303030;
+    font-size: 18px;
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
 }
 .navLink>p{
     display: flex;
@@ -160,6 +207,13 @@ position: absolute;
     .iconbox2{
         display:flex;
         color:white;
+        margin:auto;
+        gap:16px;
+        margin-right:20px;
+    }
+    .iconbox2a2{
+        display:flex;
+        color:#303030;
         margin:auto;
         gap:16px;
         margin-right:20px;

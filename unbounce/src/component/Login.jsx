@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import "./mystyle.css";
 // import {useContext,useState} from "react";
 // import Authcontext from "../Authanticate/authantication";
@@ -10,6 +10,9 @@ let select = [
 
 
 const Login = () => {
+
+    const param =  useParams()
+    console.log(param);
 
 
 return(
