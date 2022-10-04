@@ -1,5 +1,6 @@
 import { IoReturnDownForwardSharp, IoCreateOutline,IoDocumentsOutline} from "react-icons/io5";
-import { TbArrowsShuffle } from "react-icons/tb";
+import { FaHandHoldingHeart } from "react-icons/fa";
+import { TbArrowsShuffle,TbSpeakerphone } from "react-icons/tb";
 import "./Home.css";
 
 
@@ -50,13 +51,27 @@ let card3 = [
 h4:"Use AI to instantly generate copy for your marketing campaigns. No credit card required.",
 btn:"Start Writting With AI"
 }
+];
+
+let card4 = [ 
+{
+ icon:<FaHandHoldingHeart size={"50px"}/>,   
+ head:"Get your business online",
+ para:"Create landing pages and marketing campaigns that get your small business noticed. Best part? You can do it all yourself—without copywriters, designers, or developers.",
+ link:"Promote your business"
+},
+{icon:<TbSpeakerphone  size={"50px"}/>,
+ head:"Grow your marketing agency",
+ para:"Once you get clients, keep ’em. With customizable landing page templates and smart optimization features, you can launch high-converting campaigns at mad scale. ",
+ link:"Wow your clints"
+}
 ]
 
 
 const Homepg = () => {
 
     return (
-        <div >
+        <div>
            <div className="bckcolor grid"  >
              <div className="block" ><p>Smart marketing tools to grow your business</p></div>
              <div className="imgbox"><img  className="Imgimg" src="https://unbounce.com/photos/New-banner_2x_cropped_top.png" alt="" /></div>
@@ -107,7 +122,7 @@ const Homepg = () => {
             </p>
           </div>
 
-          <div className="Flexbox" >{card2.map((ele)=>{
+          {/* <div className="Flexbox" >{card2.map((ele)=>{
                 return(
                     <div style={{marginTop:"50px"}}  key={ele.h1}>
                         <img style={{width:"80%",marginTop:"-40%",marginLeft:"20px"}} src={ele.icon} alt="" />
@@ -116,7 +131,7 @@ const Homepg = () => {
                         <button  className="Btn3"><IoReturnDownForwardSharp size={"20px"}/>  {ele.link}</button>
                     </div>
                 )
-              })}</div>
+              })}</div> */}
 
               <div className="director" >
                 <div className="Flexbox" >
@@ -125,6 +140,23 @@ const Homepg = () => {
                 </div>
                  <h2 >Claire Seymour, <h5  style={{color:"gray"}}  >Director of Marketing</h5> </h2>
               </div>
+
+            
+               {/* <div  className="flexme" >
+                <div className="flexme_div" ><  img  className="flex_img" src="https://embed-ssl.wistia.com/deliveries/52aaab4e8cc647368dbaafb4d3dfc018536c8f3d.webp?image_crop_resized=960x960" alt="" /></div>
+                <div>
+                {card4.map((ele)=>{
+                    return(
+                        <div className="flexme_div" >
+                           <div>{ele.icon}<p>{ele.head}</p></div>
+                            <p>{ele.para}</p>
+                            <p className="linkstyle">{ele.link}</p>
+                        </div>
+                    )
+                  })}
+                </div>
+               </div> */}
+
               
               <div className="card3" >
                 {card3.map((ele) => {

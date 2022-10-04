@@ -15,19 +15,20 @@ import "./nav.css"
 let navpath = [
     {path:"/products",title:"Products",icon:<CgChevronDown />}, 
     {path:"/solutions",title:"Solutions",icon:<CgChevronDown/>},
-    {path:"/pricing",title:"Pricing",icon:false},
+    {path:"/pricing",title:"Pricing"},
     {path:"/learn",title:"Learn",icon:<CgChevronDown/>},
-    {path:"/contact",title:"Contact",icon:false},
+    {path:"/contact",title:"Contact"},
     ];
 
     
 const Navbar = () => {
 
-    let [isDrop,setIsDrop]=useState(false);
-    let [iso_Drop,setIso_Drop]=useState(false);
-    let [isl_Drop,setIsl_Drop]=useState(false);
-    let [minDrop,setminDrop] = useState(false);
-    let [minsearch,setminsearch] = useState(false);
+    const [isDrop,setIsDrop]=useState(false);
+    const [iso_Drop,setIso_Drop]=useState(false);
+    const [isl_Drop,setIsl_Drop]=useState(false);
+    const [minDrop,setminDrop] = useState(false);
+    const [minsearch,setminsearch] = useState(false);
+    const [scroll,setscroll] = useState(0)
    
    
 let Showmindropdown = () => {
@@ -42,7 +43,7 @@ let Showmindropdown = () => {
         setminsearch(false)
         setminDrop(false)
     }
-   
+    
 };
 
 let Showsearch = () => {
@@ -56,83 +57,93 @@ let Showsearch = () => {
     else if(minsearch && !minDrop){
       setminsearch(false)
     }
-   
 };
+
+let navclass = "navstyle";
+
+ window.addEventListener('scroll',()=> {
+    const scrolled = window.scrollY;
+   setscroll(scrolled)
+})
+
+
 
 
 
 return (
     <div> 
-    <div  className="navstyle">
+    <div  className={scroll===0?"navstyle":"navstyle2"}   >
     
-       <Link  to="/"> <img  className="xyz" src="https://unbounce.com/wp-content/themes/unbounce2019/assets/img/unbounce-icon.svg?v=1" alt="" /></Link>
+       <Link  to="/"> <img onClick={()=>setminDrop(false)} className="xyz" src={scroll===0?"https://unbounce.com/wp-content/themes/unbounce2019/assets/img/unbounce-icon.svg?v=1":"https://unbounce.com/wp-content/themes/unbounce2019/assets/img/unbounce-icon-dark.svg?v=1"} alt="" /></Link>
    
        <div  className="hide navLink" >
 
-       <p  onMouseEnter={()=>setIsDrop(true)} onMouseLeave={()=> setIsDrop(false)} ><Link className="navLink2" to={navpath[0].path} >{navpath[0].title}{navpath[0].icon}</Link>
+       <p  onMouseEnter={()=>setIsDrop(true)} onMouseLeave={()=> setIsDrop(false)} ><Link className={scroll===0?"navLink2":"navLink22"} to={navpath[0].path} >{navpath[0].title}{navpath[0].icon}</Link>
        <div  className="display-product" >
        <Productdropdown isDrop={isDrop}/>
        </div>
        </p>
 
-       <p  onMouseEnter={()=>setIso_Drop(true)} onMouseLeave={()=> setIso_Drop(false)} ><Link className="navLink2" to={navpath[1].path} >{navpath[1].title}{navpath[1].icon}</Link>
+       <p  onMouseEnter={()=>setIso_Drop(true)} onMouseLeave={()=> setIso_Drop(false)} ><Link className={scroll===0?"navLink2":"navLink22"} to={navpath[1].path} >{navpath[1].title}{navpath[1].icon}</Link>
        <div  className="display-sol">
        <Solutionsdropdown  iso_Drop={iso_Drop}/>
        </div>
        </p>
        
-       <p><Link className="navLink2" to={navpath[2].path} >{navpath[2].title}{navpath[2].icon}</Link></p>
+       <p><Link className={scroll===0?"navLink2":"navLink22"} to={navpath[2].path} >{navpath[2].title}{navpath[2].icon}</Link></p>
 
-       <p  onMouseEnter={()=>setIsl_Drop(true)} onMouseLeave={()=> setIsl_Drop(false)} ><Link className="navLink2" to={navpath[3].path} >{navpath[3].title}{navpath[3].icon}</Link>
+       <p  onMouseEnter={()=>setIsl_Drop(true)} onMouseLeave={()=> setIsl_Drop(false)} ><Link className={scroll===0?"navLink2":"navLink22"} to={navpath[3].path} >{navpath[3].title}{navpath[3].icon}</Link>
        <div  className="display-product">
        <Learndropdown isl_Drop={isl_Drop}/>
        </div>
        </p>
 
-       <p><Link className="navLink2" to={navpath[4].path} >{navpath[4].title}{navpath[4].icon}</Link></p>
+       <p><Link className={scroll===0?"navLink2":"navLink22"} to={navpath[4].path} >{navpath[4].title}{navpath[4].icon}</Link></p>
        </div>
 
 
 
 
-    <div className="iconbox">
+    <div  className={scroll===0?"iconbox":"iconbox2max hide"}   >
           <ImSearch   size="30px" />
-          <Link to="/login"><button className="btnstyle1 hide" >Log In</button></Link>
-          <Link to="/pricing" ><button className="btnstyle2 hide">Start My Free Trial</button></Link>
+          <Link to="/login"><button className={scroll===0?"btnstyle1 hide":"btnstyle1_2 hide"}      >Log In</button></Link>
+          <Link to="/pricing" ><button className={scroll===0?"btnstyle2 hide":"btnstyle2_2 hide"}>Start My Free Trial</button></Link>
     </div>
-    <div className="iconbox2 hidecomp" >
-        <ImSearch onClick={Showsearch} size="20px" />
-        <IoReorderFourSharp onClick={Showmindropdown} size="20px" />
-    </div>
-     
+    <div  className={scroll===0?"iconbox2 hidecomp":"iconbox2a2 hidecomp"}   >
+        <ImSearch onClick={Showsearch} size="25px" />
+        <IoReorderFourSharp onClick={Showmindropdown} size="25px" />
 
+    </div>
+       
     </div>
    
 
-    <div  className="notvisible" >
+    <div  className="notvisible"   >
 
            <div  style={{paddingBottom:"10px",display:minsearch?"block":"none"}}    >
-           <div  style={{display:"flex",gap:"10px",marginBottom:"10px"}} ><ImSearch   size="25px" /><input type="text" placeholder="Search..." className="search"/></div>
+           <div  className="search_div" ><ImSearch   size="25px" /><input type="text" placeholder="Search..." className="search"/></div>
            <hr/>
            </div>
 
     <div  style={{display:minDrop?"block":"none"}}>
           <div  className="min_linkbox"  >
-          {navpath.map((ele,i)=> {
+          {navpath.map((ele)=> {
             return(
-                <Link  to={ele.path} key={i} className="min_link">{ele.title}</Link>
+                <Link  to={ele.path} key={ele.title} className="min_link">{ele.title}</Link>
             )
         })}
           </div>
          <div style={{display:"flex",flexFlow:"column"}} >
-          <Link to="/pricing" ><button className="min_btn2" >Start My Free Trial</button></Link>
-          <Link  to="/login"><button className="min_btn1" >Log In</button></Link>
+          <Link className="fit"  to="/pricing" ><button className={scroll===0?"min_btn2":"min_btn2_2"} >Start My Free Trial</button></Link>
+          <Link className="fit"  to="/login"><button    className={scroll===0?"min_btn1":"min_btn1_2"} >Log In</button></Link>
          </div>
     </div>
-     
-   
 
     </div>
+
+
+
+
     </div>
 ) 
 
