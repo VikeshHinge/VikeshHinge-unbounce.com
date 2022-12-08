@@ -11,8 +11,8 @@ let select = [
 
 const Login = () => {
 
-    const param =  useParams()
-    console.log(param);
+   
+ 
 
 
 return(
