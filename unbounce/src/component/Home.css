@@ -15,7 +15,7 @@
 
 .absoliueblk{
     width:90%;
-    color: white;
+    color: white; 
     font-size: 20px;
     margin: auto;
     text-align: start;
@@ -191,6 +191,7 @@
      margin: auto;
     justify-content: center;
     align-items: center;
+    margin-bottom: 55px;
 }
 .flex_img{
     width: 100%;
@@ -207,12 +208,14 @@
     padding-left: 50px;
     margin-bottom: 20px;
     margin-top: 20px;
+    color: #303030;
 }
 .flexme_div div:first-child p{
-    font-size: 25px;
-    color: blue;
+     font-size: 30px;
+     color: blue;
      width: 75%;
      margin-left: 0px;
+     margin-top: 20px;
 }
 
 .flexme_div p{
@@ -222,7 +225,12 @@
     text-align: left;
 }
 .linkstyle{
-  border: 20px solid;
+  color: #0033ff;
+  font-size: 22px;
+  width: 60%;
+  margin: auto;
+  text-align: left;
+  margin-top: 20px;
 }
 
 
@@ -232,7 +240,6 @@
 
 
 @media all and (min-width:320px) and (max-width:720px){
-
     .imgbox{
       display: none;
     }
@@ -252,7 +259,7 @@
         width: 80%;
         font-size: 40px;
         margin: auto;
-        margin-top: 0px;
+        margin-top: 10px;
     }
     .block p{
         width: 90%;
@@ -350,4 +357,7 @@
     margin-top: 40px;
     margin-bottom: 40px;
     }
+  .linkstyle{
+    font-size: 18px;
+  }
 }

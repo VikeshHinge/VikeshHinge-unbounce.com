@@ -11,12 +11,11 @@
 .notvisible{
     display: block;
     background-color:white;
-    position: fixed;
+    position:static;
     margin-top: 65px;
     width: 100%;
-    /* height: 100vh;
-    z-index: 99; */
-    
+     /* height: 100vh; */
+    /* z-index: 99; */ 
 }
 .search_div{
     display:flex;
@@ -91,6 +90,14 @@
 .fit{
     width: 90%;
     margin: auto;
+}
+.minDrop_fixed{
+    background-color: white;
+    overflow-y: auto;
+    scroll-behavior: auto;
+    position: fixed;
+    width: 100%;
+    top:22%;
 }
 
 }

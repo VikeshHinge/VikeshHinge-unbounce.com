@@ -10,9 +10,10 @@
     padding-bottom:10px;
     gap:30px;
     align-items: center;
-    position: fixed;
-
+     position: fixed; 
+   
 }
+
 .navstyle2{
     width:100%;
     height:50px;
@@ -23,6 +24,7 @@
     gap:30px;
     align-items: center;
     position: fixed;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
 .flexdis{
@@ -59,9 +61,11 @@
     height:40px;
     font-size:15px;
     font-weight:bolder;
-    background-color:#303030;
-    border:2px solid white;
     color:white;
+    background-color: transparent;
+    border: none;
+    border: 2px solid white;
+    align-items: center;
 }
 .btnstyle1_2{
     margin:auto;
@@ -69,34 +73,40 @@
     height:40px;
     font-size:15px;
     font-weight:bolder;
-    background-color:transparent;
-    border:2px solid #0033ff;
     color:#0033ff;
+    border: 2px solid #0033ff;
+    align-items: center;
+    background-color: white;
 }
  .btnstyle2{
     margin:auto;
     height:40px;
     font-size:15px;
     font-weight:bolder;
-    background-color:white;
-    border:2px solid white;
     border-radius:2px;
     color:#303030;
+    text-decoration: none;
+    align-items: center;
+    border: none;
 }
 .btnstyle2_2{
     margin:auto;
     height:40px;
     font-size:15px;
     font-weight:bolder;
-    background-color:#0033ff;
-    border:2px solid #0033ff;
     border-radius:2px;
     color:white;
+   background-color: #0033ff;
+   align-items: center;
+   border: none;
 }
 .hidecomp{ 
     display: none;
 }
-
+.hide{
+    display: flex;
+ 
+}
 
 .navLink{
   color: white;
@@ -197,6 +207,9 @@ position: absolute;
 
 @media all and (min-width:320px) and (max-width:720px){
 
+   
+   
+
     .iconbox {
        display: none;
        }
@@ -218,8 +231,35 @@ position: absolute;
         gap:16px;
         margin-right:20px;
     }
+    .product_min{
+        background-color: aquamarine; 
+     }
 
-
+     .display-product{
+        position: absolute;
+        background-color: white;
+        border: none;
+        width: 80%;
+        left: 10%;
+        top:60px;
+       }
+       
+       .display-pro{
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           padding: 20px;
+           color: #303030;
+           
+       }
+    .navstyle{
+     /* margin-top: -65px;
+     position: fixed;  */
+   }
+   .navstyle2{
+    /* margin-top: -65px; */
+    /* position: fixed;  */
+  }
 }
 
 

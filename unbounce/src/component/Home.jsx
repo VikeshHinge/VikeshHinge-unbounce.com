@@ -1,4 +1,4 @@
-import { IoReturnDownForwardSharp, IoCreateOutline,IoDocumentsOutline} from "react-icons/io5";
+import { IoReturnDownForwardSharp, IoCreateOutline,IoDocumentsOutline,IoArrowForwardSharp} from "react-icons/io5";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { TbArrowsShuffle,TbSpeakerphone } from "react-icons/tb";
 import "./Home.css";
@@ -67,7 +67,7 @@ let card4 = [
 }
 ]
 
-
+ 
 const Homepg = () => {
 
     return (
@@ -122,7 +122,7 @@ const Homepg = () => {
             </p>
           </div>
 
-          {/* <div className="Flexbox" >{card2.map((ele)=>{
+          <div className="Flexbox" >{card2.map((ele)=>{
                 return(
                     <div style={{marginTop:"50px"}}  key={ele.h1}>
                         <img style={{width:"80%",marginTop:"-40%",marginLeft:"20px"}} src={ele.icon} alt="" />
@@ -131,7 +131,7 @@ const Homepg = () => {
                         <button  className="Btn3"><IoReturnDownForwardSharp size={"20px"}/>  {ele.link}</button>
                     </div>
                 )
-              })}</div> */}
+              })}</div>
 
               <div className="director" >
                 <div className="Flexbox" >
@@ -141,8 +141,16 @@ const Homepg = () => {
                  <h2 >Claire Seymour, <h5  style={{color:"gray"}}  >Director of Marketing</h5> </h2>
               </div>
 
+                    
+          <div  className="Box2" >
+            <h1>No matter how you grow, we can help</h1>
+            <p>Your business is unique—and so is the way you grow it online. Whatever you want to achieve
+               with your marketing, Unbounce has a solution that can help you do it better, faster.
+            </p>
+          </div>
+               
             
-               {/* <div  className="flexme" >
+               <div  className="flexme" >
                 <div className="flexme_div" ><  img  className="flex_img" src="https://embed-ssl.wistia.com/deliveries/52aaab4e8cc647368dbaafb4d3dfc018536c8f3d.webp?image_crop_resized=960x960" alt="" /></div>
                 <div>
                 {card4.map((ele)=>{
@@ -150,12 +158,12 @@ const Homepg = () => {
                         <div className="flexme_div" >
                            <div>{ele.icon}<p>{ele.head}</p></div>
                             <p>{ele.para}</p>
-                            <p className="linkstyle">{ele.link}</p>
+                            <h4 className="linkstyle"><IoArrowForwardSharp/>{ele.link}</h4>
                         </div>
                     )
                   })}
                 </div>
-               </div> */}
+               </div>
 
               
               <div className="card3" >
